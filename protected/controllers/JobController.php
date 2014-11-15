@@ -124,10 +124,13 @@ class JobController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Job');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+//		$dataProvider=new CActiveDataProvider('Job');
+//		$this->render('index',array(
+//			'dataProvider'=>$dataProvider,
+//		));
+		$User = User::model()->findByPk(1);
+		$Jobs = Job::model()->findAll(array('with' => 'Company'));
+		$this->renderPartial('main', array('Jobs' => $Jobs, 'User' => $User));
 	}
 
 	/**

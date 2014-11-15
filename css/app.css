@@ -1,0 +1,27 @@
+.table-width {
+  width: 90%;
+}
+
+.table-padding {
+  padding-top: 7%;
+}
+
+#example tr:hover {
+    background-color: #ccc;
+}
+
+#example td:hover {
+    cursor: pointer;
+}
+
+.calendar-height{
+  height: 30em;
+}
+
+.calendar-padding{
+  padding-right: 5%;
+}
+
+/*.log-out{
+  display: none;
+}*/

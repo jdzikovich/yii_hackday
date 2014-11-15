@@ -11,7 +11,6 @@ return array(
 
 	// preloading 'log' component
 	'preload'=>array(
-//	    'foundation', // preload the foundation component
 		'log'
 	),
 
@@ -38,16 +37,17 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		// uncomment the following to enable URLs in path-format
-		/*
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
+				 '' => 'job/index',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		*/
+		
 		
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=hackdb',
@@ -56,8 +56,6 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
-		
-//		'foundation' => array("class" => "ext.foundation.components.Foundation"),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
